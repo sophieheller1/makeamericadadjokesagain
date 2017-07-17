@@ -1,12 +1,15 @@
-var allTweets = document.querySelectorAll('twitterwidget')
-for (i - 0; i < allTweets.length; i++) {
-	var username = allTweets[i].shadowRoot.querySelector('.TweetAuthor-screenName')
+// console.log('i work')
+var tweets = document.querySelectorAll('twitterwidget');
+for (var i = 0; i < tweets.length; i++) {
+	var username = tweets[i].shadowRoot.querySelector('.TweetAuthor-screenName')
+	var name = tweets[0].shadowRoot.querySelector('.TweetAuthor-name')
 
 	if (username && username.textContent === '@realDonaldTrump') {
-		username = '@realDadJokes'
+		username.textContent = '@realDadJokes'
+		name.textContent 'Dad J. Joke'
 		var trumpTweet = tweets[i].shadowRoot.querySelector('.Tweet-text')
 		if (trumpTweet) {
-			trumpTweet = 'Dad Joke here'
+			trumpTweet.innerText = 'Dad Joke here'
 		}
 	}
 }
