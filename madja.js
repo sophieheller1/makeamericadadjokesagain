@@ -1,6 +1,16 @@
-// console.log('i work')
-var tweets = document.querySelectorAll('twitterwidget');
-for (var i = 0; i < tweets.length; i++) {
+var dadTesting = false;
+
+if (dadTesting) {
+	console.log('Start the dad jokes');
+}
+function madja() {
+	console.log('in function')
+	if (dadTesting){
+		console.log('Processing dad jokes.')
+	}
+
+	var tweets = document.querySelectorAll('twitterwidget');
+	for (var i = 0; i < tweets.length; i++) {
 	var username = tweets[i].shadowRoot.querySelector('.TweetAuthor-screenName')
 	var authorName = tweets[i].shadowRoot.querySelector('.TweetAuthor-name')
 	var avatar = tweets[i].shadowRoot.querySelector('.Avatar')
@@ -14,4 +24,9 @@ for (var i = 0; i < tweets.length; i++) {
 			trumpTweet.innerText = 'Dad Joke here'
 		}
 	}
+
+	if(dadTesting){
+		console.log('Dad jokes complete.')
+	}
+  }
 }
